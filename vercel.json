@@ -1,17 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "*.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
     {
-      "src": "(.*)",
-      "dest": "app.py"
+      "src": "/auth/figma/login",
+      "dest": "/api/auth.js"
+    },
+    {
+      "src": "/auth/figma/callback",
+      "dest": "/api/auth.js"
     }
-  ],
-  "git": {
-    "deploymentEnabled": false
-  }
+  ]
 }
+
